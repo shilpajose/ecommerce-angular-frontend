@@ -1,0 +1,16 @@
+<a href="admin-prodmgmt">Back to home</a>
+<div class="container w-75 mt-5 bg-secondary-subtle p-5">
+    <form action="" [formGroup]="AddNewproductForm">
+        <h2 class="text-center text-primary">Add New Product</h2>
+        <input formControlName="pname" type="text" class="form-control mt-5 mb-3" id="pname" name="pname" placeholder="pname">
+        <input formControlName="description" type="text" class="form-control mb-3" id="description" name="description"
+            placeholder="description">
+        <input formControlName="price" type="text" class="form-control mb-3" id="price" name="price" placeholder="price">
+        <input formControlName="image" type="text" class="form-control mb-3" id="image" name="image" placeholder="image">
+        <input formControlName="rating" type="text" class="form-control mb-3" id="rating" name="rating" placeholder="rating">
+        <input formControlName="count" type="text" class="form-control mb-3" id="count" name="count" placeholder="count">
+<div class="text-center">
+            <button (click)="addProduct()" type="submit" class="btn btn-primary">Add</button>
+    
+</div>    </form>
+</div>

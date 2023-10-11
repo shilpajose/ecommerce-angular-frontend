@@ -3,15 +3,37 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LandingComponent } from './landing/landing.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminhomeComponent } from './adminhome/adminhome.component';
+import { AdminUserMgmtComponent } from './admin-user-mgmt/admin-user-mgmt.component';
+import { AdminProdMgmtComponent } from './admin-prod-mgmt/admin-prod-mgmt.component';
+import { HttpClientModule} from '@angular/common/http';
+import { AdminAddProductComponent } from './admin-add-product/admin-add-product.component';
+import { EditproductComponent } from './editproduct/editproduct.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LandingComponent,
+    HeaderComponent,
+    FooterComponent,
+    AdminLoginComponent,
+    AdminhomeComponent,
+    AdminUserMgmtComponent,
+    AdminProdMgmtComponent,
+    AdminAddProductComponent,
+    EditproductComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule  ],
   providers: [],
   bootstrap: [AppComponent]
 })

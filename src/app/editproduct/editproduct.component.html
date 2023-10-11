@@ -1,0 +1,15 @@
+<a href="admin-prodmgmt" class="mt-5 ms-5">Back to home</a>
+<div class="container w-75 mt-1 bg-secondary-subtle p-5">
+    <form action="">
+        <h2 class="text-center text-primary">Add New Product</h2>
+        <input [(ngModel)]="pdata.pname" type="text" class="form-control mt-5 mb-3" id="pname" name="pname" placeholder="pname">
+        <input [(ngModel)]="pdata.description" type="text" class="form-control mb-3" id="description" name="description" placeholder="description">
+        <input [(ngModel)]="pdata.price" type="text" class="form-control mb-3" id="price" name="price" placeholder="price">
+        <input [(ngModel)]="pdata.image" type="text" class="form-control mb-3" id="image" name="image" placeholder="image">
+        <input [(ngModel)]="pdata.rating" type="text" class="form-control mb-3" id="rating" name="rating" placeholder="rating">
+        <input [(ngModel)]="pdata.count" type="text" class="form-control mb-3" id="count" name="count" placeholder="count">
+        <div class="text-center">
+            <button (click)="editProduct()" type="submit" class="btn btn-primary">Update</button>
+        </div>
+    </form>
+</div>

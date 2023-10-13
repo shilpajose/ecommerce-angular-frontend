@@ -13,7 +13,10 @@ import { AdminUserMgmtComponent } from './admin-user-mgmt/admin-user-mgmt.compon
 import { AdminProdMgmtComponent } from './admin-prod-mgmt/admin-prod-mgmt.component';
 import { HttpClientModule} from '@angular/common/http';
 import { AdminAddProductComponent } from './admin-add-product/admin-add-product.component';
-import { EditproductComponent } from './editproduct/editproduct.component'
+import { EditproductComponent } from './editproduct/editproduct.component';
+import { SingleproductComponent } from './singleproduct/singleproduct.component';
+import { UserloginComponent } from './userlogin/userlogin.component';
+import { UserRegisterComponent } from './user-register/user-register.component'
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { EditproductComponent } from './editproduct/editproduct.component'
     AdminUserMgmtComponent,
     AdminProdMgmtComponent,
     AdminAddProductComponent,
-    EditproductComponent
+    EditproductComponent,
+    SingleproductComponent,
+    UserloginComponent,
+    UserRegisterComponent
   ],
   imports: [
     BrowserModule,

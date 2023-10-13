@@ -9,3 +9,20 @@
     </ul>
   </div>
   <p>landingggg</p>
+
+
+  <div class="container me-5 p-5">
+    <div class="row">
+      <div *ngFor="let i of products" class="card" style="width: 18rem;">
+        <img src="{{i.image}}" class="card-img-top" alt="..." style="height: 300px;">
+        <div class="card-body">
+          <h5 class="card-title">{{i.pname}}</h5>
+          <p class="card-text">{{i.description}}</p>
+          <p class="card-text">{{i.price}}</p>
+          <p class="card-text">{{i.rating}}</p>
+          <p class="card-text">{{i.count}}</p>
+          <a href="#" class="btn btn-primary" routerLink="product-view/{{i._id}}">view</a>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -36,11 +36,19 @@ export class AdminProdMgmtComponent {
   editpage(id:any){
     this.rout.navigateByUrl(`editproduct/${id}`)
   }
-  deleteProduct(){
-    this.ds.removeProduct(this.id).subscribe({
+  deleteProduct(id:any){
+    this.ds.deleteProduct(id).subscribe({
       next:(result:any)=>{
-        alert(`Are you sure! Do you want to delete this item`)
-        this.rout.navigateByUrl("admin-prodmgmt")
+        alert(result.message)
+
+        // for refresh
+        this.ds.getAllProducts().subscribe({
+          next: (result: any) => {
+            console.log(result.message);
+            this.pdata = result.message
+          }
+        })
+
       }
     })
   }

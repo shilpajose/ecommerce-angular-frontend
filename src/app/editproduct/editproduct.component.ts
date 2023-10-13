@@ -9,30 +9,31 @@ import { DataService } from '../service/data.service';
 })
 export class EditproductComponent {
 
-   id:any=''
+   pid:any=''
    pdata:any={}
   constructor(private rout:Router,private ds:DataService,private ar:ActivatedRoute){}
   
   ngOnInit():void{
-    this.ar.params.subscribe(data=>{
-      this.id = data["id"]
-       console.log(this.id);
+    // after edit butto click get id throuh url/param
+    this.ar.params.subscribe((data:any)=>{
+      this.pid = data.id
+      //  console.log(this.id);
     })
 
-    this.ds.editProductApi(this.id,this.pdata).subscribe({
+    this.ds.getoneproduct(this.pid).subscribe({
       next:(result:any)=>{
-        this.pdata = result
-        console.log(this.pdata);
-        
+        this.pdata = result.message
+        // console.log(this.pdata);
       }
     })
 
   }
   editProduct(){
-    this.ds.editProductApi(this.id,this.pdata).subscribe({
+    this.ds.editProductApi(this.pid,this.pdata).subscribe({
       next:(result:any)=>{
         alert('product data updated')
-        this.rout.navigateByUrl(`admin-prodmgmt/${this.id}`)
+        // this.rout.navigateByUrl(`admin-prodmgmt/${this.id}`)
+        this.rout.navigateByUrl(`admin-prodmgmt`)
       }
     })
   }

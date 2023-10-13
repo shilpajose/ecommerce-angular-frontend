@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from '../service/data.service';
 
 @Component({
   selector: 'app-landing',
@@ -7,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class LandingComponent {
 
+  products:any=[]
+  constructor(private rout:Router,private ds:DataService){}
+
+  ngOnInit():void{
+    this.ds.getAllProducts().subscribe({
+      next:(result:any)=>{
+        this.products=result.message
+      }
+    })
+  }
 }
